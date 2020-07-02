@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	
+}
+
+.logo-smartphone {
+
+	width: 45px;
+	height: 45px;
+	margin-left: 15px;
+}
+
+/*------HEADER------*/
+header {
+	position: fixed;
+	width: 100%;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: linear-gradient(to right, #eecda3, #ef629f);
+
+}
+
+.items-ul {
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+li {
+	list-style: none;
+}
+
+li a {
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	text-align: center;
+	padding: 30px 20px;
+	font-weight: 700;
+	font-size: 14px;
+	text-transform: uppercase;
+
+}
+
+
+li a:hover {
+	background-color: #f3a5b9;
+
+}
+
+/*------SECCION CONTENIDO------*/
+.contenido {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	
+}
+
+.seccion-formulario {
+	grid-column: 1/4;
+	grid-row: span 2;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center; 
+	width: 100%;
+	height: 100%;
+	background-color: #FFE6FF;
+	
+}
+
+form h1 {
+	text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+	color: #4f4a4d;
+	margin-bottom: 1em;
+}
+
+input[type=email] {
+	padding: 0.8em;
+	width: 70%;
+	border: 1px solid #ccc;
+  	border-radius: 4px;
+  	box-sizing: border-box;
+  	margin-bottom: 1.7em;
+}
+
+input[type=submit] {
+	padding: 0.8em;
+	width: 50%;
+	border: none;
+	cursor: pointer;
+	background-color: #FFE6FF;
+	color: #EF88A1;
+	border: 1.5px solid #EF88A1;
+	padding: 15px 0 15px 0;
+	font-size: 17px;
+	font-weight: 700;
+	transition: all 0.2s ease-in-out;
+}
+
+input[type=submit]:hover {
+	background-color: #EF88A1;
+	color: #FFE6FF;
+	transform: scale(1.1);
+}
+
+/*------SECCION FEATURES------*/
+.seccion-features {
+	grid-column:1/4;
+	display: flex;
+	align-items: center;
+	text-align:center;
+	
+}
+
+.feature1, .feature2, .feature3 {
+	background-color: pink;	
+	padding: 6.5em 3em;
+
+}
+
+.feature1 > p, .feature2 > p, .feature3 > p {
+	color: #4f4a4d;
+	font-size: 1.2em;
+	text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+}
+
+.logo-features {
+	margin-bottom: 1em;
+}
+
+/*------SECCION VIDEO------*/
+.seccion-video {
+	grid-column: 1/4;
+	display: flex;
+	justify-content: center;
+}
+
+.seccion-video iframe {
+	margin: 1.6860em;
+}
+
+/*------SECCION FOOTER------*/
+footer {
+	background-color: #766f73;
+	padding: 2.2em;
+	color: #fff;
+	font-size: 15px;
+}
+
+footer .social-media {
+	float: right;
+}
+
+a > i {
+	color: #fff;
+	width: 30px;
+	height: 30px;
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+
+	.contenido {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		grid-template-areas: 
+		"formulario formulario formulario"
+		"formulario formulario formulario"
+		"features features features"
+		"video video video"
+	}
+
+	.seccion-formulario {
+		grid-area: formulario;
+	}
+
+
+	.seccion-features {
+		grid-area: features;
+		width: 100%;
+		display: block;
+
+	}
+
+	.seccion-video {
+		grid-area: video;
+	}
+
+
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
